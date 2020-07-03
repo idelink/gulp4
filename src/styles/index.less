@@ -1,0 +1,35 @@
+@import "var.less";
+
+.page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 14px;
+  color: @black;
+  background: @background;
+  text-rendering: optimizeLegibility;
+  .header {
+    flex: 0 0 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+  .content {
+  	flex: 1;
+  }
+  .footer {
+    flex: 0 0 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: @black;
+    font-size: 14px;
+    padding: 0 24px;
+  }
+}
