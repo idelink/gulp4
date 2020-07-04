@@ -4,6 +4,7 @@ const postcss = require('gulp-postcss')
 const cssnano = require('gulp-cssnano')
 const autoprefixer = require('autoprefixer')
 const babel = require('gulp-babel')
+const sourcemaps = require('gulp-sourcemaps')
 
 const taskCopyStatic = () => {
   return gulp.src('../src/static/**/*.*')
@@ -34,9 +35,13 @@ const taskLess = () => {
 
 const taskJS = () => {
   return gulp.src('../src/**/*.js')
+    .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['@babel/preset-env']
     }))
+    .pipe(sourcemaps.write())
+    // 如果需要将sourcemap分离到单独的文件中，则需要指定sourcemap文件路径
+    // .pipe(sourcemaps.write('sourcemap path'))
     .pipe(gulp.dest('../dist'))
 }
 
