@@ -1,3 +1,4 @@
+const del = require('del')
 const gulp = require('gulp')
 const less = require('gulp-less')
 const postcss = require('gulp-postcss')
@@ -45,10 +46,14 @@ const taskJS = () => {
     .pipe(gulp.dest('../dist'))
 }
 
+const taskClean = async () => {
+  return await del(['../dist'], { force: true })
+}
+
 const taskWatch = () => {
   gulp.watch('../src/**/*.js', gulp.series(taskJS))
   gulp.watch('../src/**/*.less', gulp.series(taskLess))
   gulp.watch('../src/static/**/*.*', gulp.series(taskCopyStatic))
 }
 
-exports.default = gulp.parallel(taskCopyStatic, taskLess, taskJS, taskWatch)
+exports.default = gulp.series(taskClean, gulp.parallel(taskCopyStatic, taskLess, taskJS, taskWatch))
