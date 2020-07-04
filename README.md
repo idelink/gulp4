@@ -149,7 +149,7 @@ class Cat extends Animal {
 const cat = new Cat('hellokitty')
 ```
 
-### 生产sourcemap
+### 生成sourcemap
 
 1. 安装依赖`yarn add -D gulp-sourcemaps`
 2. 将JS task更改为如下
