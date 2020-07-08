@@ -170,4 +170,4 @@ const taskJS = () => {
 
 ---
 
-本为已同步到个人博客网站, 地址:  [Gulp4在前端中的基本用法](https://www.gogoing.site/articles/1fa6b018-335e-4d7a-a525-45fb73871cdd.html)
+本文已同步到个人博客网站, 地址:  [Gulp4在前端中的基本用法](https://www.gogoing.site/articles/1fa6b018-335e-4d7a-a525-45fb73871cdd.html)
