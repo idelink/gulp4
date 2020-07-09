@@ -170,4 +170,7 @@ const taskJS = () => {
 
 ---
 
-本文已同步到个人博客网站, 地址:  [Gulp4在前端中的基本用法](https://www.gogoing.site/articles/1fa6b018-335e-4d7a-a525-45fb73871cdd.html)
+本文已同步到个人博客网站, 地址:  [Gulp4的基本使用](https://www.gogoing.site/articles/1fa6b018-335e-4d7a-a525-45fb73871cdd.html)
+
+如果你觉得这篇文章对你有帮助以及你对前端有着浓厚的兴趣，欢迎关注微信公众号-<b>前端学堂</b>，更多精彩文章等着你！
+
