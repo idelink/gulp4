@@ -19,11 +19,16 @@ const config = {
     ],
     static: resolve('src/static/**/*.*')
   },
+  watch: {
+    less: resolve('src/**/*.less')
+  },
   dist: {
     default: resolve('dist'),
     static: resolve('dist/static')
   }
 }
+
+console.log(config)
 
 const taskCopyStatic = () => {
   return gulp.src(config.src.static)
@@ -69,9 +74,9 @@ const taskClean = async () => {
 }
 
 const taskWatch = () => {
-  gulp.watch(config.src.js, gulp.series(taskJS))
-  gulp.watch(config.src.less, gulp.series(taskLess))
-  gulp.watch(config.src.static, gulp.series(taskCopyStatic))
+  gulp.watch(config.watch.js || config.src.js, gulp.series(taskJS))
+  gulp.watch(config.watch.less || config.src.less, gulp.series(taskLess))
+  gulp.watch(config.watch.static || config.src.static, gulp.series(taskCopyStatic))
 }
 
 exports.default = gulp.series(taskClean, gulp.parallel(taskCopyStatic, taskLess, taskJS, taskWatch))
