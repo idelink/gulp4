@@ -7,7 +7,7 @@
     "start": "gulp --gulpfile build/gulp.config.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "service@gogoing.site",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.4",
