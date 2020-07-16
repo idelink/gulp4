@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp --gulpfile build/gulp.config.js"
+    "start": "gulp --gulpfile scripts/gulp.config.js"
   },
   "keywords": [],
   "author": "service@gogoing.site",

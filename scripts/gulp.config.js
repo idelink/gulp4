@@ -28,8 +28,6 @@ const config = {
   }
 }
 
-console.log(config)
-
 const taskCopyStatic = () => {
   return gulp.src(config.src.static)
     .pipe(gulp.dest(config.dist.static))
